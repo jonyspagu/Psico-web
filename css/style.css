@@ -1,5 +1,5 @@
 /* ============================================================
-   style.css — Dra. Ana García | Psicóloga Clínica
+   style.css — Dra. Guadalupe Arcuri | Psicóloga Clínica
    Metodología: BEM + Custom Properties
    Mobile-first, WCAG AA
    ============================================================ */
@@ -122,6 +122,19 @@ ul {
 .fade-in:nth-child(5) { transition-delay: 0.4s; }
 .fade-in:nth-child(6) { transition-delay: 0.5s; }
 
+/* Textura de grano — sensación de papel en vez de vector plano */
+@media (prefers-reduced-motion: no-preference) {
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
 /* Visualmente oculto pero accesible para lectores de pantalla */
 .sr-only {
   position: absolute;
@@ -143,8 +156,8 @@ h1, h2, h3, h4 {
   color: var(--color-text-dark);
 }
 
-h1 { font-size: clamp(2rem, 5vw, 3.25rem); }
-h2 { font-size: clamp(1.625rem, 3.5vw, 2.5rem); }
+h1 { font-size: clamp(2.25rem, 6vw, 4rem); text-wrap: balance; }
+h2 { font-size: clamp(1.625rem, 3.5vw, 2.5rem); text-wrap: balance; }
 h3 { font-size: clamp(1.125rem, 2vw, 1.375rem); }
 
 p {
@@ -405,29 +418,15 @@ p {
   overflow: hidden;
 }
 
-/* Forma decorativa de fondo */
+/* Filete fino decorativo — reemplaza los blobs de gradiente */
 .hero::before {
   content: '';
   position: absolute;
-  top: -10%;
-  right: -15%;
-  width: 55%;
-  height: 75%;
-  background: radial-gradient(ellipse, var(--color-sage-light) 0%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.hero::after {
-  content: '';
-  position: absolute;
-  bottom: 5%;
-  left: -10%;
-  width: 40%;
-  height: 50%;
-  background: radial-gradient(ellipse, var(--color-terra-light) 0%, transparent 70%);
-  border-radius: 50%;
+  top: var(--space-lg);
+  bottom: var(--space-lg);
+  left: 0;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, var(--color-taupe), transparent);
   pointer-events: none;
   z-index: 0;
 }
@@ -447,19 +446,16 @@ p {
 }
 
 .hero__eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-xs);
+  display: block;
   font-size: 0.8125rem;
   font-weight: 500;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--color-sage-dark);
-  background-color: var(--color-sage-light);
-  padding: 0.375rem 0.875rem;
-  border-radius: var(--radius-pill);
   margin-bottom: var(--space-md);
 }
+
+.hero__eyebrow svg { display: none; }
 
 .hero__title {
   margin-bottom: var(--space-md);
@@ -469,7 +465,7 @@ p {
 }
 
 .hero__title em {
-  font-style: normal;
+  font-style: italic;
   color: var(--color-terracotta);
 }
 
@@ -487,31 +483,31 @@ p {
   margin-bottom: var(--space-lg);
 }
 
-/* Trust badges */
+/* Credenciales — línea tipográfica, sin pills ni íconos */
 .hero__trust {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: var(--space-sm);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-sand);
 }
 
 .hero__badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
   font-size: 0.8125rem;
   font-weight: 500;
+  letter-spacing: 0.02em;
   color: var(--color-text-mid);
-  background-color: #fff;
-  border: 1px solid var(--color-sand);
-  padding: 0.375rem 0.875rem;
-  border-radius: var(--radius-pill);
-  box-shadow: var(--shadow-sm);
+  font-variant-numeric: tabular-nums;
 }
 
-.hero__badge svg {
-  color: var(--color-sage);
-  flex-shrink: 0;
+.hero__badge:not(:last-child)::after {
+  content: '·';
+  margin-left: var(--space-sm);
+  color: var(--color-taupe);
 }
+
+.hero__badge svg { display: none; }
 
 /* Imagen / decoración lado derecho */
 .hero__visual {
@@ -652,11 +648,10 @@ p {
   display: block;
   width: 100%;
   aspect-ratio: 4 / 5;
-  max-width: 360px;
+  max-width: 400px;
   margin-inline: auto;
-  border-radius: var(--radius-lg);
   object-fit: cover;
-  box-shadow: var(--shadow-md);
+  will-change: transform;
 }
 
 /* Sticker decorativo sobre la foto */
@@ -690,28 +685,37 @@ p {
   font-size: 1.0625rem;
 }
 
-/* Badges de credenciales */
+/* Credenciales — línea tipográfica con filetes, sin pills ni íconos */
 .about__credentials {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-xs);
+  gap: var(--space-sm) var(--space-md);
   margin-top: var(--space-xs);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-sand);
 }
 
 .about__credential {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
   font-size: 0.8125rem;
   font-weight: 500;
+  letter-spacing: 0.02em;
   color: var(--color-sage-dark);
-  background-color: var(--color-sage-light);
-  padding: 0.375rem 0.875rem;
-  border-radius: var(--radius-pill);
 }
 
 .about__credential svg {
-  flex-shrink: 0;
+  display: none;
+}
+
+/* Cita destacada */
+.about__quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  line-height: 1.5;
+  color: var(--color-text-dark);
+  border-left: 3px solid var(--color-terracotta);
+  padding-left: var(--space-md);
+  margin-block: var(--space-xs);
 }
 
 /* ─── SERVICIOS ──────────────────────────────────────────────── */
@@ -915,35 +919,33 @@ p {
   }
 }
 
-/* Tarjeta de testimonio */
+/* Cita de testimonio — formato editorial, sin card ni estrellas */
 .testimonial-card {
-  background-color: #fff;
-  border-radius: var(--radius-md);
-  padding: var(--space-lg);
-  border: 1px solid var(--color-sand);
+  padding-top: var(--space-lg);
+  border-top: 2px solid var(--color-sand);
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
-}
-
-.testimonial-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-card-hover);
 }
 
 .testimonial-card__stars {
-  display: flex;
-  gap: 3px;
-  color: var(--color-terracotta);
+  display: none;
 }
 
 .testimonial-card__quote {
-  font-size: 1rem;
-  color: var(--color-text-mid);
-  line-height: 1.75;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  color: var(--color-text-dark);
+  line-height: 1.6;
   font-style: italic;
   flex: 1;
+}
+
+.testimonial-card__quote::before {
+  content: '\201C';
+  color: var(--color-terracotta);
+  font-size: 1.5em;
+  line-height: 0;
 }
 
 .testimonial-card__author {
@@ -953,18 +955,7 @@ p {
 }
 
 .testimonial-card__avatar {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: var(--color-sage-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1rem;
-  color: var(--color-sage-dark);
-  flex-shrink: 0;
+  display: none;
 }
 
 .testimonial-card__name {
@@ -1027,23 +1018,20 @@ p {
   color: var(--color-sage-dark);
 }
 
-/* Icono "+" / "−" */
+/* Icono "+" / "−" — solo el símbolo, sin fondo */
 .faq__icon {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background-color: var(--color-sage-light);
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-sage-dark);
   flex-shrink: 0;
-  transition: background-color var(--transition-fast), transform var(--transition-base);
+  transition: transform var(--transition-base);
 }
 
 .faq__item[open] .faq__icon {
-  background-color: var(--color-sage);
-  color: #fff;
+  color: var(--color-terracotta);
   transform: rotate(45deg);
 }
 
@@ -1086,27 +1074,24 @@ p {
 
 .contact__channel {
   display: flex;
-  align-items: center;
-  gap: var(--space-sm);
+  flex-direction: column;
+  gap: 2px;
   font-size: 0.9375rem;
+  padding-block: var(--space-sm);
+  border-bottom: 1px solid var(--color-sand);
 }
 
 .contact__channel-icon {
-  width: 44px;
-  height: 44px;
-  background-color: var(--color-sage-light);
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-sage-dark);
-  flex-shrink: 0;
+  display: none;
 }
 
 .contact__channel strong {
   display: block;
   font-weight: 500;
-  color: var(--color-text-dark);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-sage-dark);
 }
 
 .contact__channel span {

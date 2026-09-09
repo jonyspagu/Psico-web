@@ -186,15 +186,10 @@ function claseError(array $errores, string $campo): string {
 
           <!-- Columna de texto -->
           <div class="hero__content">
-            <p class="hero__eyebrow" aria-hidden="true">
-              <i data-lucide="heart" width="14" height="14"></i>
-              Psicología Clínica para adultos
-            </p>
+            <p class="hero__eyebrow">Psicología Clínica para adultos</p>
 
             <!-- H1 único de la página — clave para SEO -->
-            <h1 class="hero__title">
-              Un espacio seguro para entenderte y avanzar hacia el bienestar que <em>merecés.</em>
-            </h1>
+            <h1 class="hero__title">Un espacio seguro para entenderte y avanzar hacia el bienestar que <em>merecés.</em></h1>
 
             <p class="hero__subtitle">
               Psicología clínica para adultos — 100% online, para todo el país. Agendá tu primera consulta hoy.
@@ -213,18 +208,9 @@ function claseError(array $errores, string $campo): string {
 
             <!-- Trust badges -->
             <div class="hero__trust" role="list" aria-label="Credenciales">
-              <div class="hero__badge" role="listitem">
-                <i data-lucide="users" aria-hidden="true" width="14" height="14"></i>
-                +200 pacientes acompañados
-              </div>
-              <div class="hero__badge" role="listitem">
-                <i data-lucide="graduation-cap" aria-hidden="true" width="14" height="14"></i>
-                Lic. en Psicología — UBA
-              </div>
-              <div class="hero__badge" role="listitem">
-                <i data-lucide="shield-check" aria-hidden="true" width="14" height="14"></i>
-                Mat. 12345
-              </div>
+              <span class="hero__badge" role="listitem">+200 pacientes acompañados</span>
+              <span class="hero__badge" role="listitem">Lic. en Psicología — UBA</span>
+              <span class="hero__badge" role="listitem">Mat. 12345</span>
             </div>
           </div>
 
@@ -250,7 +236,7 @@ function claseError(array $errores, string $campo): string {
 
           <!-- Foto -->
           <div class="about__photo-wrap fade-in">
-            <img class="about__photo-placeholder" src="img/sobre-mi.jpg" alt="Dra. Guadalupe Arcuri, psicóloga clínica">
+            <img class="about__photo-placeholder" src="img/sobre-mi.jpg" alt="Dra. Guadalupe Arcuri, psicóloga clínica" data-parallax>
 
             <!-- Sticker "8 años de experiencia" -->
             <div class="about__sticker" aria-hidden="true">
@@ -268,27 +254,18 @@ function claseError(array $errores, string $campo): string {
             <p>
               Elegí la psicología porque creo que entenderse a uno mismo es una de las formas más profundas de cambiar la propia vida. Desde hace 8 años acompaño a personas que atraviesan momentos difíciles, que buscan conocerse mejor, o que simplemente sienten que algo no está funcionando como quisieran.
             </p>
-            <p>
-              Me especializo en ansiedad, vínculos y crisis vitales, trabajando desde un enfoque cognitivo-conductual integrativo. Mi forma de trabajar combina rigor clínico con calidez: cada persona es única, y el proceso terapéutico se construye a su medida.
+            <p class="about__quote">
+              "Mi forma de trabajar combina rigor clínico con calidez: cada persona es única, y el proceso terapéutico se construye a su medida."
             </p>
             <p>
-              Soy Licenciada en Psicología por la UBA, con formación de posgrado en Terapia Cognitivo-Conductual. Trabajo de forma ética, con confidencialidad absoluta.
+              Me especializo en ansiedad, vínculos y crisis vitales, trabajando desde un enfoque cognitivo-conductual integrativo. Soy Licenciada en Psicología por la UBA, con formación de posgrado en Terapia Cognitivo-Conductual. Trabajo de forma ética, con confidencialidad absoluta.
             </p>
 
             <!-- Credenciales -->
             <div class="about__credentials" role="list" aria-label="Formación académica">
-              <span class="about__credential" role="listitem">
-                <i data-lucide="graduation-cap" width="14" height="14" aria-hidden="true"></i>
-                Universidad de Buenos Aires
-              </span>
-              <span class="about__credential" role="listitem">
-                <i data-lucide="brain" width="14" height="14" aria-hidden="true"></i>
-                Especialización en TCC
-              </span>
-              <span class="about__credential" role="listitem">
-                <i data-lucide="award" width="14" height="14" aria-hidden="true"></i>
-                8 años de experiencia
-              </span>
+              <span class="about__credential" role="listitem">Universidad de Buenos Aires</span>
+              <span class="about__credential" role="listitem">Especialización en TCC</span>
+              <span class="about__credential" role="listitem">8 años de experiencia</span>
             </div>
 
             <a href="#contacto" class="btn btn--primary" style="align-self: flex-start; margin-top: 0.5rem;">
@@ -315,31 +292,36 @@ function claseError(array $errores, string $campo): string {
 
         <ul class="services__grid" role="list">
 
-          <li class="service-card fade-in" role="listitem">            <h3 class="service-card__title">Ansiedad y estrés</h3>
+          <li class="service-card fade-in" role="listitem">
+            <h3 class="service-card__title">Ansiedad y estrés</h3>
             <p class="service-card__desc">
               Cuando la mente no para, el cuerpo lo siente. Herramientas reales para el día a día.
             </p>
           </li>
 
-          <li class="service-card fade-in" role="listitem">            <h3 class="service-card__title">Tristeza y depresión</h3>
+          <li class="service-card fade-in" role="listitem">
+            <h3 class="service-card__title">Tristeza y depresión</h3>
             <p class="service-card__desc">
               Un espacio para explorar lo que sentís, sin juicio y a tu propio ritmo.
             </p>
           </li>
 
-          <li class="service-card fade-in" role="listitem">            <h3 class="service-card__title">Relaciones y vínculos</h3>
+          <li class="service-card fade-in" role="listitem">
+            <h3 class="service-card__title">Relaciones y vínculos</h3>
             <p class="service-card__desc">
               Entendemos juntos los patrones que se repiten y cómo cambiarlos.
             </p>
           </li>
 
-          <li class="service-card fade-in" role="listitem">            <h3 class="service-card__title">Crisis y transiciones vitales</h3>
+          <li class="service-card fade-in" role="listitem">
+            <h3 class="service-card__title">Crisis y transiciones vitales</h3>
             <p class="service-card__desc">
               Los momentos de quiebre también pueden ser puntos de partida.
             </p>
           </li>
 
-          <li class="service-card fade-in" role="listitem">            <h3 class="service-card__title">Autoconocimiento personal</h3>
+          <li class="service-card fade-in" role="listitem">
+            <h3 class="service-card__title">Autoconocimiento personal</h3>
             <p class="service-card__desc">
               No hace falta estar en crisis. Muchas personas vienen para conocerse mejor.
             </p>
@@ -405,18 +387,12 @@ function claseError(array $errores, string $campo): string {
         <ul class="testimonials__grid" role="list">
 
           <li class="testimonial-card fade-in" role="listitem">
-            <div class="testimonial-card__stars" aria-label="5 estrellas">
-              <?php for ($i = 0; $i < 5; $i++): ?>
-                <i data-lucide="star" width="16" height="16" aria-hidden="true" style="fill:currentColor"></i>
-              <?php endfor; ?>
-            </div>
             <blockquote>
               <p class="testimonial-card__quote">
-                "Llegar a terapia fue difícil para mí. Pero desde la primera sesión sentí que podía hablar sin que me juzgaran."
+                Llegar a terapia fue difícil para mí. Pero desde la primera sesión sentí que podía hablar sin que me juzgaran.
               </p>
             </blockquote>
             <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar" aria-hidden="true">M</div>
               <div>
                 <p class="testimonial-card__name">M.G.</p>
                 <p class="testimonial-card__meta">34 años — Paciente</p>
@@ -425,18 +401,12 @@ function claseError(array $errores, string $campo): string {
           </li>
 
           <li class="testimonial-card fade-in" role="listitem">
-            <div class="testimonial-card__stars" aria-label="5 estrellas">
-              <?php for ($i = 0; $i < 5; $i++): ?>
-                <i data-lucide="star" width="16" height="16" aria-hidden="true" style="fill:currentColor"></i>
-              <?php endfor; ?>
-            </div>
             <blockquote>
               <p class="testimonial-card__quote">
-                "El proceso fue exactamente lo que necesitaba. Aprendí a escucharme de una manera que no sabía que era posible."
+                El proceso fue exactamente lo que necesitaba. Aprendí a escucharme de una manera que no sabía que era posible.
               </p>
             </blockquote>
             <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar" aria-hidden="true">L</div>
               <div>
                 <p class="testimonial-card__name">L.R.</p>
                 <p class="testimonial-card__meta">28 años — Paciente</p>
@@ -445,18 +415,12 @@ function claseError(array $errores, string $campo): string {
           </li>
 
           <li class="testimonial-card fade-in" role="listitem">
-            <div class="testimonial-card__stars" aria-label="5 estrellas">
-              <?php for ($i = 0; $i < 5; $i++): ?>
-                <i data-lucide="star" width="16" height="16" aria-hidden="true" style="fill:currentColor"></i>
-              <?php endfor; ?>
-            </div>
             <blockquote>
               <p class="testimonial-card__quote">
-                "Las sesiones online fueron una de las mejores decisiones que tomé. La comodidad de estar en casa ayudó mucho."
+                Las sesiones online fueron una de las mejores decisiones que tomé. La comodidad de estar en casa ayudó mucho.
               </p>
             </blockquote>
             <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar" aria-hidden="true">P</div>
               <div>
                 <p class="testimonial-card__name">P.V.</p>
                 <p class="testimonial-card__meta">41 años — Paciente</p>
@@ -593,50 +557,30 @@ function claseError(array $errores, string $campo): string {
 
             <ul class="contact__channels" role="list">
               <li class="contact__channel">
-                <div class="contact__channel-icon" aria-hidden="true">
-                  <i data-lucide="message-circle" width="22" height="22"></i>
-                </div>
-                <div>
-                  <strong>WhatsApp</strong>
-                  <a
-                    href="https://wa.me/5491112345678?text=Hola%20Guada%2C%20me%20gustar%C3%ADa%20agendar%20una%20consulta."
-                    aria-label="Escribir por WhatsApp a +54 9 11 1234-5678"
-                    style="color: var(--color-sage-dark); font-size: 0.9375rem;"
-                  >+54 9 11 1234-5678</a>
-                </div>
+                <strong>WhatsApp</strong>
+                <a
+                  href="https://wa.me/5491112345678?text=Hola%20Guada%2C%20me%20gustar%C3%ADa%20agendar%20una%20consulta."
+                  aria-label="Escribir por WhatsApp a +54 9 11 1234-5678"
+                  style="color: var(--color-sage-dark); font-size: 0.9375rem;"
+                >+54 9 11 1234-5678</a>
               </li>
 
               <li class="contact__channel">
-                <div class="contact__channel-icon" aria-hidden="true">
-                  <i data-lucide="mail" width="22" height="22"></i>
-                </div>
-                <div>
-                  <strong>Email</strong>
-                  <a
-                    href="mailto:guadalupe.arcuri@psicologia.com"
-                    style="color: var(--color-sage-dark); font-size: 0.9375rem;"
-                  >guadalupe.arcuri@psicologia.com</a>
-                </div>
+                <strong>Email</strong>
+                <a
+                  href="mailto:guadalupe.arcuri@psicologia.com"
+                  style="color: var(--color-sage-dark); font-size: 0.9375rem;"
+                >guadalupe.arcuri@psicologia.com</a>
               </li>
 
               <li class="contact__channel">
-                <div class="contact__channel-icon" aria-hidden="true">
-                  <i data-lucide="clock" width="22" height="22"></i>
-                </div>
-                <div>
-                  <strong>Horarios de atención</strong>
-                  <span>Lunes a viernes, 9 a 19 hs.</span>
-                </div>
+                <strong>Horarios de atención</strong>
+                <span>Lunes a viernes, 9 a 19 hs.</span>
               </li>
 
               <li class="contact__channel">
-                <div class="contact__channel-icon" aria-hidden="true">
-                  <i data-lucide="monitor" width="22" height="22"></i>
-                </div>
-                <div>
-                  <strong>Zona de atención</strong>
-                  <span>Atención 100% online — Para todo el país</span>
-                </div>
+                <strong>Zona de atención</strong>
+                <span>Atención 100% online — Para todo el país</span>
               </li>
             </ul>
 
@@ -818,10 +762,7 @@ function claseError(array $errores, string $campo): string {
 
         <!-- Aviso de crisis -->
         <div class="footer__crisis" role="note" aria-label="Información de emergencia">
-          <strong>
-            <i data-lucide="phone-call" width="14" height="14" aria-hidden="true" style="display:inline; vertical-align:middle; margin-right:6px;"></i>
-            Si estás en una situación de emergencia
-          </strong>
+          <strong>Si estás en una situación de emergencia</strong>
           Si estás atravesando una crisis y necesitás ayuda inmediata, llamá al
           <a href="tel:135" aria-label="Llamar al Centro de Asistencia al Suicida, número 135, gratuito">135</a>
           — Centro de Asistencia al Suicida (gratuito, las 24 hs, todo el país).

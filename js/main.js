@@ -1,11 +1,13 @@
 /**
- * main.js — Dra. Ana García | Psicóloga Clínica
+ * main.js — Dra. Guadalupe Arcuri | Psicóloga Clínica
  * Responsabilidades:
  *   1. Glassmorphism en la nav al hacer scroll
  *   2. Menú móvil (hamburguesa)
  *   3. Animaciones fade-in con IntersectionObserver
  *   4. Botón "volver arriba"
  *   5. Cerrar menú móvil al hacer click en un enlace
+ *   6. Parallax leve en la foto de Sobre Mí
+ *   7. Botones "magnetic" en desktop
  */
 
 (function () {
@@ -162,6 +164,50 @@
 
   if (sections.length && navLinks.length) {
     window.addEventListener('scroll', updateActiveNavLink, { passive: true });
+  }
+
+  const prefersMotion = window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
+
+  /* ── 7. PARALLAX LEVE EN LA FOTO DE SOBRE MÍ ────────────── */
+  if (prefersMotion) {
+    const parallaxEl = document.querySelector('[data-parallax]');
+
+    if (parallaxEl) {
+      let ticking = false;
+
+      function updateParallax() {
+        const rect = parallaxEl.getBoundingClientRect();
+        const progress = (window.innerHeight / 2 - (rect.top + rect.height / 2)) / window.innerHeight;
+        const offset = Math.max(-1, Math.min(1, progress)) * 16;
+        parallaxEl.style.transform = 'translateY(' + offset.toFixed(1) + 'px)';
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function () {
+        if (!ticking) {
+          window.requestAnimationFrame(updateParallax);
+          ticking = true;
+        }
+      }, { passive: true });
+
+      updateParallax();
+    }
+  }
+
+  /* ── 7. BOTONES "MAGNETIC" EN DESKTOP ────────────────────── */
+  if (prefersMotion && window.matchMedia('(pointer: fine)').matches) {
+    document.querySelectorAll('.btn--primary, .btn--secondary').forEach(function (btn) {
+      btn.addEventListener('mousemove', function (e) {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        btn.style.transform = 'translate(' + (x * 0.18).toFixed(1) + 'px, ' + (y * 0.35).toFixed(1) + 'px)';
+      });
+
+      btn.addEventListener('mouseleave', function () {
+        btn.style.transform = '';
+      });
+    });
   }
 
 })();
