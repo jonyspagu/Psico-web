@@ -1,5 +1,5 @@
 /**
- * server.js — Servidor Node.js para el sitio de Dra. Lupita Arcuri
+ * server.js — Servidor Node.js para el sitio de Dra. Guadalupe Arcuri
  * Sirve el sitio estático y procesa el formulario de contacto.
  *
  * Uso: node server.js
@@ -22,8 +22,8 @@ app.use(express.static(path.join(__dirname)));
 // IMPORTANTE: Reemplazá estos datos con los reales antes de producción.
 // Para Gmail: activá "Contraseñas de aplicación" en tu cuenta Google.
 const EMAIL_CONFIG = {
-  destinatario: 'lupita.arcuri@psicologia.com',  // <-- email de Lupita
-  remitente:    'lupita.arcuri@psicologia.com',  // <-- mismo email o uno de envío
+  destinatario: 'guadalupe.arcuri@psicologia.com',  // <-- email de Guada
+  remitente:    'guadalupe.arcuri@psicologia.com',  // <-- mismo email o uno de envío
   password:     'TU_PASSWORD_DE_APP_GMAIL',       // <-- contraseña de app
 };
 
@@ -75,7 +75,7 @@ app.post('/api/contact', async (req, res) => {
 
   // Construir el email
   const mailOptions = {
-    from:    `"Sitio Web Lupita Arcuri" <${EMAIL_CONFIG.remitente}>`,
+    from:    `"Sitio Web Guadalupe Arcuri" <${EMAIL_CONFIG.remitente}>`,
     to:      EMAIL_CONFIG.destinatario,
     replyTo: `"${nombre}" <${email}>`,
     subject: `Nuevo contacto desde el sitio web — ${nombre}`,
@@ -111,7 +111,7 @@ Enviado el: ${new Date().toLocaleString('es-AR')}
           <p style="color: #2c2c2c; margin: 0; white-space: pre-wrap;">${mensaje}</p>
         </div>` : ''}
         <p style="color: #8c8c8c; font-size: 12px; margin-top: 24px;">
-          Enviado el ${new Date().toLocaleString('es-AR')} desde lupitaarcuri.com
+          Enviado el ${new Date().toLocaleString('es-AR')} desde guadalupearcuri.com
         </p>
       </div>
     `,

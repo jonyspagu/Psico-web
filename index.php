@@ -1,6 +1,6 @@
 <?php
 /**
- * index.php — Dra. Lupita Arcuri | Psicóloga Clínica
+ * index.php — Dra. Guadalupe Arcuri | Psicóloga Clínica
  * One-page website — PHP 8+
  *
  * Gestiona:
@@ -51,19 +51,19 @@ function claseError(array $errores, string $campo): string {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- ─── SEO ─────────────────────────────────────────────────── -->
-  <title>Lupita Arcuri | Psicóloga Clínica en Buenos Aires | Turnos Online y Presenciales</title>
-  <meta name="description" content="Psicología clínica para adultos en Buenos Aires y online. Especialista en ansiedad, vínculos y crisis vitales. Primera consulta sin compromiso. Respondemos en 24hs.">
+  <title>Guadalupe Arcuri | Psicóloga Clínica Online | Turnos para toda Argentina</title>
+  <meta name="description" content="Psicología clínica online para adultos, en toda Argentina. Especialista en ansiedad, vínculos y crisis vitales. Respondemos en 24hs.">
   <meta name="robots" content="index, follow">
-  <meta name="author" content="Lupita Arcuri — Psicóloga Clínica">
+  <meta name="author" content="Guadalupe Arcuri — Psicóloga Clínica">
 
   <!-- Canonical — reemplazar con la URL real en producción -->
-  <link rel="canonical" href="https://www.anagarciapsicologa.com.ar/">
+  <link rel="canonical" href="https://www.guadalupearcuri.com.ar/">
 
   <!-- ─── OPEN GRAPH ───────────────────────────────────────────── -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Lupita Arcuri | Psicóloga Clínica en Buenos Aires">
-  <meta property="og:description" content="Psicología clínica para adultos en Buenos Aires y online. Especialista en ansiedad, vínculos y crisis vitales.">
-  <meta property="og:url" content="https://www.anagarciapsicologa.com.ar/">
+  <meta property="og:title" content="Guadalupe Arcuri | Psicóloga Clínica Online">
+  <meta property="og:description" content="Psicología clínica online para adultos, en toda Argentina. Especialista en ansiedad, vínculos y crisis vitales.">
+  <meta property="og:url" content="https://www.guadalupearcuri.com.ar/">
   <meta property="og:locale" content="es_AR">
   <!-- og:image: agregar imagen real de 1200x630px en producción -->
 
@@ -72,15 +72,15 @@ function claseError(array $errores, string $campo): string {
   {
     "@context": "https://schema.org",
     "@type": "Physician",
-    "name": "Lupita Arcuri",
+    "name": "Guadalupe Arcuri",
     "description": "Psicóloga Clínica especialista en ansiedad, vínculos y crisis vitales.",
-    "url": "https://www.anagarciapsicologa.com.ar/",
+    "url": "https://www.guadalupearcuri.com.ar/",
     "telephone": "+5491112345678",
-    "email": "lupita.arcuri@psicologia.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Buenos Aires",
-      "addressCountry": "AR"
+    "email": "guadalupe.arcuri@psicologia.com",
+    "areaServed": "AR",
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "serviceType": "Videoconsulta"
     },
     "openingHours": "Mo,Tu,We,Th,Fr 09:00-19:00",
     "priceRange": "$$",
@@ -121,8 +121,8 @@ function claseError(array $errores, string $campo): string {
         <div class="nav__inner">
 
           <!-- Logo -->
-          <a href="#inicio" class="nav__logo" aria-label="Dra. Lupita Arcuri — Psicóloga Clínica — Ir al inicio">
-            <span>Dra. Lupita Arcuri</span> | Psicóloga Clínica
+          <a href="#inicio" class="nav__logo" aria-label="Dra. Guadalupe Arcuri — Psicóloga Clínica — Ir al inicio">
+            <span>Dra. Guadalupe Arcuri</span> | Psicóloga Clínica
           </a>
 
           <!-- Menú desktop -->
@@ -197,7 +197,7 @@ function claseError(array $errores, string $campo): string {
             </h1>
 
             <p class="hero__subtitle">
-              Psicología clínica para adultos — presencial en Buenos Aires y online para todo el país. Agendá tu primera consulta hoy.
+              Psicología clínica para adultos — 100% online, para todo el país. Agendá tu primera consulta hoy.
             </p>
 
             <div class="hero__actions">
@@ -278,7 +278,7 @@ function claseError(array $errores, string $campo): string {
           <div class="about__content fade-in">
             <p class="section__eyebrow">Sobre mí</p>
 
-            <h2 id="sobre-mi-title">Hola, soy Lupita.</h2>
+            <h2 id="sobre-mi-title">Hola, soy Guada.</h2>
 
             <p>
               Elegí la psicología porque creo que entenderse a uno mismo es una de las formas más profundas de cambiar la propia vida. Desde hace 8 años acompaño a personas que atraviesan momentos difíciles, que buscan conocerse mejor, o que simplemente sienten que algo no está funcionando como quisieran.
@@ -377,16 +377,6 @@ function claseError(array $errores, string $campo): string {
             <h3 class="service-card__title">Autoconocimiento personal</h3>
             <p class="service-card__desc">
               No hace falta estar en crisis. Muchas personas vienen para conocerse mejor.
-            </p>
-          </li>
-
-          <li class="service-card fade-in" role="listitem">
-            <div class="service-card__icon" aria-hidden="true">
-              <i data-lucide="monitor" width="24" height="24"></i>
-            </div>
-            <h3 class="service-card__title">Sesiones online</h3>
-            <p class="service-card__desc">
-              Disponible para toda Argentina, con la misma calidad que en consultorio.
             </p>
           </li>
 
@@ -644,7 +634,7 @@ function claseError(array $errores, string $campo): string {
                 <div>
                   <strong>WhatsApp</strong>
                   <a
-                    href="https://wa.me/5491112345678?text=Hola%20Lupita%2C%20me%20gustar%C3%ADa%20agendar%20una%20consulta."
+                    href="https://wa.me/5491112345678?text=Hola%20Guada%2C%20me%20gustar%C3%ADa%20agendar%20una%20consulta."
                     aria-label="Escribir por WhatsApp a +54 9 11 1234-5678"
                     style="color: var(--color-sage-dark); font-size: 0.9375rem;"
                   >+54 9 11 1234-5678</a>
@@ -658,9 +648,9 @@ function claseError(array $errores, string $campo): string {
                 <div>
                   <strong>Email</strong>
                   <a
-                    href="mailto:lupita.arcuri@psicologia.com"
+                    href="mailto:guadalupe.arcuri@psicologia.com"
                     style="color: var(--color-sage-dark); font-size: 0.9375rem;"
-                  >lupita.arcuri@psicologia.com</a>
+                  >guadalupe.arcuri@psicologia.com</a>
                 </div>
               </li>
 
@@ -676,11 +666,11 @@ function claseError(array $errores, string $campo): string {
 
               <li class="contact__channel">
                 <div class="contact__channel-icon" aria-hidden="true">
-                  <i data-lucide="map-pin" width="22" height="22"></i>
+                  <i data-lucide="monitor" width="22" height="22"></i>
                 </div>
                 <div>
-                  <strong>Consultorio</strong>
-                  <span>Buenos Aires — Modalidad presencial y online</span>
+                  <strong>Zona de atención</strong>
+                  <span>Atención 100% online — Para todo el país</span>
                 </div>
               </li>
             </ul>
@@ -795,38 +785,7 @@ function claseError(array $errores, string $campo): string {
                 </div>
 
                 <!-- Modalidad (requerida) -->
-                <div class="form__group">
-                  <label class="form__label" for="modalidad">
-                    Modalidad de sesión
-                    <abbr title="Campo obligatorio" aria-label="requerido">*</abbr>
-                  </label>
-                  <select
-                    id="modalidad"
-                    name="modalidad"
-                    class="form__control<?= claseError($erroresForm, 'modalidad') ?>"
-                    required
-                    aria-required="true"
-                    <?= isset($erroresForm['modalidad']) ? 'aria-describedby="error-modalidad"' : '' ?>
-                  >
-                    <option value="" disabled <?= empty($datosForm['modalidad']) ? 'selected' : '' ?>>
-                      Seleccioná una opción
-                    </option>
-                    <option value="Presencial" <?= (valorPrevio($datosForm, 'modalidad') === 'Presencial') ? 'selected' : '' ?>>
-                      Presencial (Buenos Aires)
-                    </option>
-                    <option value="Online" <?= (valorPrevio($datosForm, 'modalidad') === 'Online') ? 'selected' : '' ?>>
-                      Online (cualquier lugar del país)
-                    </option>
-                    <option value="Indistinto" <?= (valorPrevio($datosForm, 'modalidad') === 'Indistinto') ? 'selected' : '' ?>>
-                      Indistinto
-                    </option>
-                  </select>
-                  <?php if (isset($erroresForm['modalidad'])): ?>
-                    <p class="form__error" id="error-modalidad" role="alert">
-                      <?= htmlspecialchars($erroresForm['modalidad'], ENT_QUOTES, 'UTF-8') ?>
-                    </p>
-                  <?php endif; ?>
-                </div>
+                <input type="hidden" id="modalidad" name="modalidad" value="Online">
 
                 <!-- Mensaje (opcional) -->
                 <div class="form__group">
@@ -882,13 +841,13 @@ function claseError(array $errores, string $campo): string {
 
         <!-- Marca y copyright -->
         <div>
-          <p class="footer__brand-name">Lupita Arcuri</p>
+          <p class="footer__brand-name">Guadalupe Arcuri</p>
           <p class="footer__brand-sub">Psicóloga Clínica</p>
           <p class="footer__brand-sub" style="margin-bottom: 1rem;">
             Lic. en Psicología — Mat. 12345 — COPSI
           </p>
           <p class="footer__copyright">
-            &copy; <?= date('Y') ?> Lupita Arcuri. Todos los derechos reservados.
+            &copy; <?= date('Y') ?> Guadalupe Arcuri. Todos los derechos reservados.
           </p>
         </div>
 

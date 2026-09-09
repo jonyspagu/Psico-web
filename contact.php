@@ -1,7 +1,7 @@
 <?php
 /**
  * contact.php — Procesador del formulario de contacto
- * Dra. Lupita Arcuri | Psicóloga Clínica
+ * Dra. Guadalupe Arcuri | Psicóloga Clínica
  *
  * Seguridad implementada:
  * - Validación server-side de todos los campos requeridos
@@ -15,8 +15,8 @@ declare(strict_types=1);
 
 // ─── CONFIGURACIÓN ────────────────────────────────────────────────
 // IMPORTANTE: Antes de producción, reemplazá estos valores con los reales.
-const DESTINATARIO = 'lupita.arcuri@psicologia.com';
-const NOMBRE_SITIO = 'Dra. Lupita Arcuri — Psicóloga Clínica';
+const DESTINATARIO = 'guadalupe.arcuri@psicologia.com';
+const NOMBRE_SITIO = 'Dra. Guadalupe Arcuri — Psicóloga Clínica';
 const URL_FORMULARIO = 'index.php#contacto'; // URL de vuelta tras el envío
 
 // ─── INICIO DE SESIÓN (necesario para CSRF y rate limiting) ───────
@@ -97,12 +97,8 @@ if (!empty($telefono)) {
     }
 }
 
-// Modalidad (requerida, valores permitidos)
-$modalidadesPermitidas = ['Presencial', 'Online', 'Indistinto'];
-$modalidad = limpiarString($_POST['modalidad'] ?? '');
-if (empty($modalidad) || !in_array($modalidad, $modalidadesPermitidas, true)) {
-    $errores['modalidad'] = 'Por favor, seleccioná una modalidad.';
-}
+// Modalidad (fija: la práctica es 100% online)
+$modalidad = 'Online';
 
 // Mensaje (opcional, máx 2000 chars si se ingresa)
 $mensaje = limpiarString($_POST['mensaje'] ?? '');
@@ -155,7 +151,7 @@ if ($enviado) {
 } else {
     // El servidor no pudo enviar el email
     // En producción, loggear este error con error_log()
-    $_SESSION['form_error'] = 'Hubo un problema al enviar tu mensaje. Por favor, intentá de nuevo o escribinos directamente a lupita.arcuri@psicologia.com.';
+    $_SESSION['form_error'] = 'Hubo un problema al enviar tu mensaje. Por favor, intentá de nuevo o escribinos directamente a guadalupe.arcuri@psicologia.com.';
     $_SESSION['form_datos'] = compact('nombre', 'email', 'telefono', 'modalidad', 'mensaje');
     header('Location: ' . URL_FORMULARIO);
 }
