@@ -234,18 +234,7 @@ function claseError(array $errores, string $campo): string {
               <!-- Reemplazar este div con una etiqueta <img> real cuando haya foto profesional -->
               <div class="hero__image-placeholder">
                 <i data-lucide="user-round" width="64" height="64"></i>
-                <span>Foto profesional<br>de la Dra. García</span>
-              </div>
-
-              <!-- Tarjeta flotante decorativa -->
-              <div class="hero__floating-card" aria-hidden="true">
-                <div class="hero__floating-card-icon">
-                  <i data-lucide="clock" width="20" height="20"></i>
-                </div>
-                <div>
-                  <strong>Primera consulta</strong>
-                  <span>60 min · Sin compromiso</span>
-                </div>
+                <span>Foto profesional<br>de la Dra. Arcuri</span>
               </div>
             </div>
           </div>
@@ -260,12 +249,8 @@ function claseError(array $errores, string $campo): string {
         <div class="about__grid">
 
           <!-- Foto -->
-          <div class="about__photo-wrap fade-in" aria-hidden="true">
-            <!-- Reemplazar con <img> real en producción -->
-            <div class="about__photo-placeholder">
-              <i data-lucide="user-round" width="72" height="72"></i>
-              <span>Foto de la Dra. García</span>
-            </div>
+          <div class="about__photo-wrap fade-in">
+            <img class="about__photo-placeholder" src="img/sobre-mi.jpg" alt="Dra. Guadalupe Arcuri, psicóloga clínica">
 
             <!-- Sticker "8 años de experiencia" -->
             <div class="about__sticker" aria-hidden="true">
@@ -330,51 +315,31 @@ function claseError(array $errores, string $campo): string {
 
         <ul class="services__grid" role="list">
 
-          <li class="service-card fade-in" role="listitem">
-            <div class="service-card__icon" aria-hidden="true">
-              <i data-lucide="wind" width="24" height="24"></i>
-            </div>
-            <h3 class="service-card__title">Ansiedad y estrés</h3>
+          <li class="service-card fade-in" role="listitem">            <h3 class="service-card__title">Ansiedad y estrés</h3>
             <p class="service-card__desc">
               Cuando la mente no para, el cuerpo lo siente. Herramientas reales para el día a día.
             </p>
           </li>
 
-          <li class="service-card fade-in" role="listitem">
-            <div class="service-card__icon" aria-hidden="true">
-              <i data-lucide="cloud-rain" width="24" height="24"></i>
-            </div>
-            <h3 class="service-card__title">Tristeza y depresión</h3>
+          <li class="service-card fade-in" role="listitem">            <h3 class="service-card__title">Tristeza y depresión</h3>
             <p class="service-card__desc">
               Un espacio para explorar lo que sentís, sin juicio y a tu propio ritmo.
             </p>
           </li>
 
-          <li class="service-card fade-in" role="listitem">
-            <div class="service-card__icon" aria-hidden="true">
-              <i data-lucide="heart-handshake" width="24" height="24"></i>
-            </div>
-            <h3 class="service-card__title">Relaciones y vínculos</h3>
+          <li class="service-card fade-in" role="listitem">            <h3 class="service-card__title">Relaciones y vínculos</h3>
             <p class="service-card__desc">
               Entendemos juntos los patrones que se repiten y cómo cambiarlos.
             </p>
           </li>
 
-          <li class="service-card fade-in" role="listitem">
-            <div class="service-card__icon" aria-hidden="true">
-              <i data-lucide="compass" width="24" height="24"></i>
-            </div>
-            <h3 class="service-card__title">Crisis y transiciones vitales</h3>
+          <li class="service-card fade-in" role="listitem">            <h3 class="service-card__title">Crisis y transiciones vitales</h3>
             <p class="service-card__desc">
               Los momentos de quiebre también pueden ser puntos de partida.
             </p>
           </li>
 
-          <li class="service-card fade-in" role="listitem">
-            <div class="service-card__icon" aria-hidden="true">
-              <i data-lucide="search" width="24" height="24"></i>
-            </div>
-            <h3 class="service-card__title">Autoconocimiento personal</h3>
+          <li class="service-card fade-in" role="listitem">            <h3 class="service-card__title">Autoconocimiento personal</h3>
             <p class="service-card__desc">
               No hace falta estar en crisis. Muchas personas vienen para conocerse mejor.
             </p>

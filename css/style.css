@@ -649,26 +649,14 @@ p {
 }
 
 .about__photo-placeholder {
+  display: block;
   width: 100%;
   aspect-ratio: 4 / 5;
   max-width: 360px;
   margin-inline: auto;
-  background: linear-gradient(160deg, var(--color-sage-light) 0%, var(--color-sand) 100%);
   border-radius: var(--radius-lg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-sm);
-  color: var(--color-sage-dark);
-  font-size: 0.875rem;
-  padding: var(--space-md);
-}
-
-.about__photo-placeholder svg {
-  width: 72px;
-  height: 72px;
-  opacity: 0.45;
+  object-fit: cover;
+  box-shadow: var(--shadow-md);
 }
 
 /* Sticker decorativo sobre la foto */
